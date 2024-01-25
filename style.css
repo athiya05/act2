@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(20deg, #000, rgb(103, 22, 134), white);
+}
+.marvs{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.marvs ul {
+    display: flex;
+    list-style: none;
+}
+
+.marvs ul li a{
+    text-decoration: none;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0 25px;
+    color: #000;
+    font-family: russo one;
+    position: relative;
+}
+
+.marvs ul li a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(108, 75, 185);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0..25s linear;
+}
+
+.marvs ul li a:hover:after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
